@@ -1,29 +1,35 @@
-# React + Vite
+# PWA Demo
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project demonstrates a simple Progressive Web App (PWA) that can be installed as a Chrome desktop application.
 
-Currently, two official plugins are available:
+## Installation
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+You can install this web app directly from the browser:
 
+1. Navigate to `localhost:5173` in your Chrome browser.
+2. Click on the "Install" button in the address bar.
 
+Alternatively, you can install it through your browser settings:
 
-PWA OPTIMIZATION
+1. Click on the browser menu (three dots at the upper right corner).
+2. Go to `More tools` > `Create shortcut`.
+3. Check the `Open as window` option and click `Create`.
 
-Is not configured for a custom splash screen
-Failures: No manifest was fetched.
-A themed splash screen ensures a high-quality experience when users launch your app from their homescreens. Learn more about splash screens.
+## Manifest
 
-Does not set a theme color for the address bar.
-Failures: No manifest was fetched, No `<meta name="theme-color">` tag found.
-The browser address bar can be themed to match your site. Learn more about theming the address bar.
+The `manifest.json` file is configured for the PWA with appropriate icons and application settings.
 
-Content is sized correctly for the viewport
-If the width of your app's content doesn't match the width of the viewport, your app might not be optimized for mobile screens. Learn how to size content for the viewport.
-
-Has a <meta name="viewport"> tag with width or initial-scale
-A <meta name="viewport"> not only optimizes your app for mobile screen sizes, but also prevents a 300 millisecond delay to user input. Learn more about using the viewport meta tag.
-
-Manifest doesn't have a maskable iconNo manifest was fetched
-A maskable icon ensures that the image fills the entire shape without being letterboxed when installing the app on a device. Learn about maskable manifest icons.# pwa
+```json
+{
+  "short_name": "Enis's Sample PWA",
+  "name": "PWA by Enis",
+  "icons": [
+    {
+      "src": "assets/maskable_icon_x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    // ... other icons
+  ],
+  // ... other manifest properties
+}
